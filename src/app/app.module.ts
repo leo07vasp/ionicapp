@@ -12,6 +12,9 @@ import { IntroPageModule } from "../pages/intro/intro.module";
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+import { HttpModule } from "@angular/http";
+import { MovieProvider } from '../providers/movie/movie';
+
 
 @NgModule({
   declarations: [
@@ -24,7 +27,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     FavoritosPageModule,
 	IntroPageModule,
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+	HttpModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -34,7 +38,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    MovieProvider
   ]
 })
 export class AppModule {}
