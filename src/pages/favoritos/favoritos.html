@@ -15,4 +15,32 @@
 
 <ion-content padding>
 
+
+
+
+	<ion-card *ngFor="let filme of lista_filmes">
+       <img [src]="'https://image.tmdb.org/t/p/w300/' + filme.backdrop_path" />
+       <div class="card-title">{{filme.original_title}}</div>
+       <div class="card-subtitle">{{filme.vote_average}}</div>
+     </ion-card>
+
+     <!-- <ion-card>
+       <img src="assets/imgs/card-amsterdam.png"/>
+       <div class="card-title">Amsterdam</div>
+       <div class="card-subtitle">64 Listings</div>
+     </ion-card>
+
+     <ion-card>
+       <img src="assets/imgs/card-sf.png"/>
+       <div class="card-title">San Francisco</div>
+       <div class="card-subtitle">72 Listings</div>
+     </ion-card>
+
+     <ion-card>
+       <img src="assets/imgs/card-madison.png"/>
+       <div class="card-title">Madison</div>
+       <div class="card-subtitle">28 Listings</div>
+     </ion-card> -->
+
+
 </ion-content>

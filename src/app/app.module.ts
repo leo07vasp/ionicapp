@@ -7,13 +7,14 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { FavoritosPageModule } from '../pages/favoritos/favoritos.module';
 import { DetalhesPageModule } from '../pages/detalhes/detalhes.module';
 import { JogadoresPageModule } from "../pages/jogadores/jogadores.module";
+import { FeedPageModule } from "../pages/feed/feed.module";
 import { IntroPageModule } from "../pages/intro/intro.module";
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HttpModule } from "@angular/http";
-import { MovieProvider } from '../providers/movie/movie';
+
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { MovieProvider } from '../providers/movie/movie';
 	JogadoresPageModule,
 	DetalhesPageModule,
     FavoritosPageModule,
+    FeedPageModule,
 	IntroPageModule,
     BrowserModule,
     IonicModule.forRoot(MyApp),
@@ -38,8 +40,7 @@ import { MovieProvider } from '../providers/movie/movie';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
-    MovieProvider
+    {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
 export class AppModule {}

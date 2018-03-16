@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { MovieProvider } from '../../providers/movie/movie';
+
 
 /**
  * Generated class for the JogadoresPage page.
@@ -13,10 +13,7 @@ import { MovieProvider } from '../../providers/movie/movie';
 @IonicPage()
 @Component({
   selector: 'page-jogadores',
-  templateUrl: 'jogadores.html',
-  providers: [
-	  MovieProvider
-  ]
+  templateUrl: 'jogadores.html'
 })
 export class JogadoresPage {
 
@@ -39,21 +36,12 @@ export class JogadoresPage {
 
   constructor(
 	  public navCtrl: NavController,
-	  public navParams: NavParams,
-	  public MovieProvider: MovieProvider)
+	  public navParams: NavParams)
 	   {
   }
 
   ionViewDidLoad() {
-    //console.log('ionViewDidLoad JogadoresPage');
-	// this.MovieProvider.getLastMovies().subscribe(
-	// 	data=>{
-	// 		console.log(data);
-	// 	},
-	// 	error =>{
-	// 		console.log(error);
-	// 	}
-	// );
-  }
+    console.log('ionViewDidLoad JogadoresPage');
+	}
 
 }
